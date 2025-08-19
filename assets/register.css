@@ -1,0 +1,202 @@
+/* --- Scroll to Top Button --- */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  box-shadow: 0 6px 24px rgba(59,130,246,0.18), 0 1.5px 4px rgba(34,48,74,0.08);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, opacity 0.2s, transform 0.18s;
+  opacity: 0.85;
+  outline: none;
+  border: 2px solid #fff;
+}
+#scrollTopBtn:hover, #scrollTopBtn:focus {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(59,130,246,0.22), 0 2px 8px rgba(34,48,74,0.10);
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.98);
+    filter: blur(6px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-8px) scale(1.01);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* --- Corporate Navbar Styles --- */
+.navbar {
+  background: #181924 !important;
+  box-shadow: none;
+  border-bottom: none;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: #ff6a00 !important;
+  letter-spacing: 1px;
+  font-size: 1.35rem;
+}
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  transition: color 0.2s;
+}
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: #ff6a00 !important;
+  text-decoration: underline;
+}
+.navbar-toggler {
+  border: none;
+  box-shadow: none !important;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(34,48,74,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Register Page Background */
+body {
+  background-color: #e3eafc;
+  background-image: url('img/Background LOGIN.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #22304a;
+}
+
+main.container.register-main, nav, footer {
+  position: relative;
+  z-index: 1;
+}
+
+main.container.register-main {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(34,48,74,0.10), 0 1.5px 4px rgba(34,48,74,0.04);
+  padding: 2.5rem 2rem;
+  max-width: 440px;
+  border: 1px solid #e6eaf1;
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #22304a;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #22304a;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #cfd8e3;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  color: #22304a;
+  transition: border-color 0.2s;
+}
+.form-control:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.10);
+}
+
+.btn-primary {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 16px rgba(59,130,246,0.12);
+}
+
+/* Center and style the forgot password link and login button group */
+.d-flex.justify-content-between.align-items-center {
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+.d-flex.justify-content-between.align-items-center .btn-primary {
+  width: 100%;
+  margin-bottom: 0;
+}
+.d-flex.justify-content-between.align-items-center .small {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #4b5c77;
+  font-size: 0.97rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.d-flex.justify-content-between.align-items-center .small:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Checkbox and helper text */
+.form-check-input:checked {
+  background-color: #3b82f6;
+  border-color: #2563eb;
+}
+.form-text.small {
+  color: #6b7280;
+}
+
+footer {
+  background: transparent;
+  border-top: 1px solid #e6eaf1;
+}
+
+@media (max-width: 576px) {
+  main.container.register-main {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+}

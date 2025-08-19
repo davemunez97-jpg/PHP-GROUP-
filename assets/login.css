@@ -1,0 +1,197 @@
+/* --- Scroll to Top Button --- */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  background: #232b3b;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  font-size: 2rem;
+  box-shadow: 0 6px 24px rgba(35,43,59,0.18), 0 1.5px 4px rgba(34,48,74,0.08);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, opacity 0.2s, transform 0.18s;
+  opacity: 0.85;
+  outline: none;
+  border: 2px solid #fff;
+}
+#scrollTopBtn:hover, #scrollTopBtn:focus {
+  background: #1a2233;
+  opacity: 1;
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(35,43,59,0.22), 0 2px 8px rgba(34,48,74,0.10);
+}
+/* --- Navbar Style --- */
+.navbar {
+  background: #181924 !important;
+  box-shadow: none;
+  border-bottom: none;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: #ff6a00 !important;
+  letter-spacing: 1px;
+  font-size: 1.35rem;
+}
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  transition: color 0.2s;
+}
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: #ff6a00 !important;
+  text-decoration: underline;
+}
+.navbar-toggler {
+  border: none;
+  box-shadow: none !important;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(34,48,74,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* Animation for LOG IN box */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+
+/*Login Page Background*/
+body {
+  background: #181924 url('img/Background LOGIN.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #232b3b;
+}
+
+
+
+main.container.login-main {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(34,48,74,0.10), 0 1.5px 4px rgba(34,48,74,0.06);
+  padding: 2.5rem 2rem;
+  max-width: 440px;
+  border: none;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #232b3b;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #232b3b;
+}
+
+ .form-control {
+  border-radius: 8px;
+  border: 1.5px solid #cfd8e3;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  color: #232b3b;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-control:focus {
+  border-color: #7da0ca;
+  background: #fff;
+  color: #232b3b;
+  box-shadow: 0 0 0 2px rgba(125,160,202,0.10);
+}
+
+.btn-primary {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background: #232b3b;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(35,43,59,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: #1a2233;
+  color: #fff;
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(35,43,59,0.12);
+}
+
+/* Center and style the forgot password link and login button group */
+.d-flex.justify-content-between.align-items-center {
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+.d-flex.justify-content-between.align-items-center .btn-primary {
+  width: 100%;
+  margin-bottom: 0;
+}
+.d-flex.justify-content-between.align-items-center .small {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #bdbdbd;
+  font-size: 0.97rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.d-flex.justify-content-between.align-items-center .small:hover {
+  color: #ff6a00;
+  text-decoration: underline;
+}
+
+/* Checkbox and helper text */
+.form-check-input:checked {
+  background-color: #232b3b;
+  border-color: #232b3b;
+}
+.form-text.small {
+  color: #7a8ca3;
+}
+
+footer, .footer {
+  background: transparent;
+  border-top: 1px solid #cfd8e3;
+  color: #7a8ca3;
+  margin-top: auto;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  main.container.login-main {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+}

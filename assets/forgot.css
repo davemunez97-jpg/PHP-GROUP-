@@ -1,0 +1,124 @@
+/* Navbar palette styles */
+.navbar {
+  background: #181924 !important;
+  border-bottom: 4px solid #b3c6d6;
+  box-shadow: none;
+}
+.navbar .navbar-brand {
+  color: #ff6a00 !important;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+.navbar .navbar-brand:hover {
+  color: #ff8c1a !important;
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  margin-left: 1.2rem;
+  transition: color 0.18s;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+  color: #ff6a00 !important;
+}
+
+body {
+  background: #181924 url('img/Background LOGIN.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #232b3b;
+}
+
+main.container.forgot-main {
+  margin: 60px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(34,48,74,0.10), 0 1.5px 4px rgba(34,48,74,0.06);
+  padding: 2.5rem 2rem;
+  max-width: 440px;
+  border: none;
+}
+
+
+h1, .forgot-title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #232b3b;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+
+.form-label {
+  font-weight: 600;
+  color: #232b3b;
+}
+
+
+.form-control {
+  border-radius: 8px;
+  border: 1.5px solid #cfd8e3;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  color: #232b3b;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-control:focus {
+  border-color: #7da0ca;
+  background: #fff;
+  color: #232b3b;
+  box-shadow: 0 0 0 2px rgba(125,160,202,0.10);
+}
+
+
+.btn-primary {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  background: #232b3b;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(35,43,59,0.08);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: #1a2233;
+  color: #fff;
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(35,43,59,0.12);
+}
+
+
+.form-check-input:checked {
+  background-color: #232b3b;
+  border-color: #232b3b;
+}
+
+
+.form-text.small {
+  color: #7a8ca3;
+}
+
+
+.footer {
+  background: transparent;
+  border-top: 1px solid #cfd8e3;
+  color: #7a8ca3;
+  margin-top: auto;
+}
+
+@media (max-width: 576px) {
+  main.container.forgot-main {
+    padding: 1.5rem 0.5rem;
+    max-width: 98vw;
+  }
+}

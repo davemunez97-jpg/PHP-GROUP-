@@ -1,0 +1,159 @@
+/* Home Page Styles */
+
+
+
+body {
+  background: #181924;
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #fff;
+}
+
+/* Slideshow background for hero section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.hero-bg-slideshow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+.hero-bg-slideshow img.active {
+  opacity: 0.5;
+  z-index: 1;
+}
+.hero-content, .hero-image {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(120deg, #181924 60%, #2d2320 100%);
+}
+
+.hero-content {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5vw;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 2.2rem;
+  letter-spacing: 0.01em;
+}
+
+.hero-btns .btn-hero {
+  background: #ff6a00;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  padding: 0.75rem 2.2rem 0.75rem 1.5rem;
+  box-shadow: 0 4px 24px rgba(255,106,0,0.10);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+}
+.hero-btns .btn-hero:hover, .hero-btns .btn-hero:focus {
+  background: #ff8c1a;
+  color: #fff;
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(255,106,0,0.18);
+}
+.play-icon {
+  font-size: 1.3em;
+  margin-left: 0.2em;
+  vertical-align: middle;
+}
+
+.hero-image {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 50vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Navbar dark style */
+.navbar {
+  background: transparent !important;
+  box-shadow: none;
+  border-bottom: none;
+}
+.navbar .navbar-brand {
+  font-weight: 700;
+  color: #ff6a00 !important;
+  letter-spacing: 1px;
+  font-size: 1.35rem;
+}
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  margin-left: 0.7rem;
+  margin-right: 0.7rem;
+  transition: color 0.2s;
+}
+.navbar .nav-link:hover, .navbar .nav-link.active {
+  color: #ff6a00 !important;
+  text-decoration: underline;
+}
+
+footer {
+  background: transparent;
+  border-top: 1px solid #23232e;
+  color: #bdbdbd;
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    min-height: unset;
+  }
+  .hero-image {
+    min-width: 100vw;
+    max-width: 100vw;
+    min-height: 220px;
+    height: 220px;
+  }
+  .hero-content {
+    padding: 2.5rem 1.2rem 1.2rem 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-content {
+    padding: 1.2rem 0.5rem;
+  }
+}
